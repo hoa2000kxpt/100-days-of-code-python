@@ -1,3 +1,5 @@
+# Using Python print() and input() to print the city and pet
+
 print("Welcome to The Band Name Generator!")
 city = input("What city did you grow up in?\n")
 pet = input("What is the name of your first pet?\n")
