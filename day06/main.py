@@ -46,3 +46,43 @@ step = 0
 while step < 6:
     go_to_final_road()
     step = step + 1
+
+
+#Challgen
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+while front_is_clear():
+    move()
+turn_left()
+
+while front_is_clear():
+    move()
+turn_left()
+
+while front_is_clear():
+    move()
+turn_left()
+
+while front_is_clear():
+    move()
+turn_left()
+
+move()
+move()
+move()
+move()
+
+
+
+
+
+
+
+
+
+
+
