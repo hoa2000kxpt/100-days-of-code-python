@@ -3,6 +3,7 @@ import random
 from hangman_words import word_list
 from hangman_art import stages, logo2, logo3
 
+# Initialize chosen word and word length
 chosen_word = random.choice(word_list)
 word_length = len(chosen_word)
 
@@ -22,34 +23,37 @@ while not end_of_game:
 
     clear()
 
+    # If the user guesses wrong, add it to list
     if guess in wrong_guesses:
-      print(f"{' '.join(display)}")
-      print(stages[lives])
-      print(f"You've already guessed with the letter '{guess}', pick another letter.")
-    else:
-      wrong_guesses.append(guess)
-
-      for position in range(word_length):
-          letter = chosen_word[position]
-          if letter == guess:
-              display[position] = letter
-
-      print(f"{' '.join(display)}")
-
-      if "_" not in display:
-          end_of_game = True
-          print("\nGeninus, genius, genius! You won!")
-          print(logo2)
-
-      if guess not in chosen_word:
-        lives -= 1
-
-      if not end_of_game:
+        print(f"{' '.join(display)}")
         print(stages[lives])
-        if guess not in chosen_word:
-          print(f"'{guess}' is not in the word, you lost 1 life.")
+        print(f"You've already guessed with the letter '{guess}', pick another letter.")
+    else:
+        wrong_guesses.append(guess)
 
-      if lives == 0:
-        end_of_game = True
-        print("The man has been hung, you lose.")
-        print(f"\nThe word was '{chosen_word}'")
+        for position in range(word_length):
+            letter = chosen_word[position]
+            if letter == guess:
+                display[position] = letter
+
+        print(f"{' '.join(display)}")
+
+        # If there is no underscore symbol, the user wins!
+        if "_" not in display:
+            end_of_game = True
+            print("\nGeninus, genius, genius! You won!")
+            print(logo2)
+
+        # # If the user guesses wrong, subtract 1 life
+        if guess not in chosen_word:
+            lives -= 1
+
+        if not end_of_game:
+            print(stages[lives])
+            if guess not in chosen_word:
+                print(f"'{guess}' is not in the word, you lost 1 life.")
+
+        if lives == 0:
+            end_of_game = True
+            print("The man has been hung, you lose.")
+            print(f"\nThe word was '{chosen_word}'")
