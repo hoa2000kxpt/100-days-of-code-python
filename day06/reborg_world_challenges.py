@@ -1,4 +1,6 @@
-# Home 1:
+"""
+Challenge 1: Home 1
+"""
 move()
 move()
 
@@ -68,9 +70,45 @@ for i in range(4):
     go_straight()
     turn_left()
 
+# Around 1 - variable
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
 
+def move_left():
+    while front_is_clear():
+        move()
+    turn_left()
 
+
+# Create an object
+put()
+
+# Go to the road 3 times
+for i in range(3):
+    go_around()
+
+# Keep moving until the robot finds the object
+while front_is_clear():
+    move()
+    if object_here():
+        done()
+
+# Around 1 - apple
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+for i in range(4):
+    while front_is_clear():
+        move()
+        if object_here():
+            take()
+    turn_left()
 
 
 

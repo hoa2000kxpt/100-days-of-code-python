@@ -1,3 +1,8 @@
+"""
+Hints:
+# The World Rock Paper Scissors Associations: https://wrpsa.com/
+"""
+
 import random
 
 rock = '''

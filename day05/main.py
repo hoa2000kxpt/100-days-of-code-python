@@ -1,3 +1,7 @@
+"""
+Password Generator Project
+"""
+
 import random
 
 # Initialize letters, numbers, and symbols
