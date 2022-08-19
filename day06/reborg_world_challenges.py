@@ -4,17 +4,23 @@ Challenge 1: Home 1
 move()
 move()
 
-# Home 2:
+"""
+Challenge 2: Home 2
+"""
 move()
 move()
 
-# Home 3:
+"""
+Challenge 3: Home 3
+"""
 move()
 move()
 turn_left()
 move()
 
-# Home 4:
+"""
+Challenge 4: Home 4
+"""
 def turn_right():
     turn_left()
     turn_left()
@@ -47,7 +53,9 @@ three_steps()
 turn_left()
 three_steps()
 
-# Around 1:
+"""
+Challenge 5: Around 1
+"""
 def turn_right():
     turn_left()
     turn_left()
@@ -70,7 +78,9 @@ for i in range(4):
     go_straight()
     turn_left()
 
-# Around 1 - variable
+"""
+Challenge 6: Around 1 - variable
+"""
 def turn_right():
     turn_left()
     turn_left()
@@ -96,7 +106,9 @@ while front_is_clear():
     if object_here():
         done()
 
-# Around 1 - apple
+"""
+Challenge 7: Around 1 - apple
+"""
 def turn_right():
     turn_left()
     turn_left()
@@ -109,6 +121,137 @@ for i in range(4):
         if object_here():
             take()
     turn_left()
+
+"""
+Challenge 8: Around 2
+"""
+
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+def move_left():
+    while front_is_clear():
+        move()
+    turn_left()
+
+
+# Create an object
+put()
+
+for k in range(2):
+    move_left()
+
+for i in range(5):
+    move()
+turn_right()
+
+for j in range(3):
+    move_left()
+
+while front_is_clear():
+    move()
+    if object_here():
+        done()
+
+"""
+Challenge 10: Around 3
+"""
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def move_left():
+    while front_is_clear():
+        move()
+    turn_left()
+
+put()
+if wall_in_front():
+    turn_left()
+move()
+turn_right()
+move()
+move()
+turn_right()
+move()
+turn_left()
+for i in range(2):
+    move_left()
+
+for j in range(5):
+    move()
+turn_right()
+
+for k in range(3):
+    move_left()
+
+while front_is_clear():
+    move()
+    if object_here():
+        done()
+
+"""
+Challenge 11: Around 4 (NOT FINISHED YET)
+"""
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def move_left():
+    while front_is_clear():
+        move()
+    turn_left()
+
+put()
+turn_left()
+turn_left()
+move()
+turn_right()
+move()
+move()
+turn_right()
+move()
+move()
+move()
+turn_right()
+move()
+move()
+turn_left()
+move_left()
+move_left()
+for i in range(5):
+    move()
+turn_right()
+move_left()
+move_left()
+move_left()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
