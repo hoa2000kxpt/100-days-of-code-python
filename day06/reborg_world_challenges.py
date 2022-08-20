@@ -196,8 +196,13 @@ while front_is_clear():
         done()
 
 """
-Challenge 11: Around 4 (NOT FINISHED YET)
+Challenge 11: Around 4 
 """
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
 def turn_right():
     turn_left()
@@ -233,8 +238,39 @@ move_left()
 move_left()
 move_left()
 
+while front_is_clear():
+    move()
+    if object_here():
+        done()
+
+"""
+Challenge 12: Center 1 
+"""
 
 
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+# Initialize the object
+put()
+
+# Keep moving function
+while front_is_clear():
+    move()
+put()
+turn_left()
+turn_left()
+take()
+
+while front_is_clear():
+    move()
+    put()
+    take()
+    if object_here("token"):
+        done()
 
 
 
