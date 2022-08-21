@@ -1,3 +1,7 @@
+"""
+Building a calculator
+"""
+
 from art import logo
 
 
