@@ -246,38 +246,40 @@ while front_is_clear():
 """
 Challenge 12: Center 1  (NOT YET)
 """
-def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
-
-def move_left():
-    while front_is_clear():
+while True:
+    if front_is_clear():
         move()
-    turn_left()
-
-while front_is_clear():
-    move()
     if object_here():
         turn_left()
         turn_left()
+        take()
+        move()
+        put()
         move()
         if object_here():
-            done()
-        else:
+            object_here()
             turn_left()
             turn_left()
-            move()
             take()
+            move()
+            done()
+        if wall_in_front():
             turn_left()
             turn_left()
             move()
-            put()
-    if wall_in_front():
+
+        elif wall_in_front():
+            object_here()
+            take()
+            move()
+
+    elif wall_in_front():
         turn_left()
         turn_left()
         put()
         move()
+
+
 
 
 
