@@ -244,33 +244,42 @@ while front_is_clear():
         done()
 
 """
-Challenge 12: Center 1 
+Challenge 12: Center 1  (NOT YET)
 """
-
-
 def turn_right():
     turn_left()
     turn_left()
     turn_left()
 
-
-# Initialize the object
-put()
-
-# Keep moving function
-while front_is_clear():
-    move()
-put()
-turn_left()
-turn_left()
-take()
+def move_left():
+    while front_is_clear():
+        move()
+    turn_left()
 
 while front_is_clear():
     move()
-    put()
-    take()
-    if object_here("token"):
-        done()
+    if object_here():
+        turn_left()
+        turn_left()
+        move()
+        if object_here():
+            done()
+        else:
+            turn_left()
+            turn_left()
+            move()
+            take()
+            turn_left()
+            turn_left()
+            move()
+            put()
+    if wall_in_front():
+        turn_left()
+        turn_left()
+        put()
+        move()
+
+
 
 
 
