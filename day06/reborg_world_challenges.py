@@ -244,11 +244,10 @@ while front_is_clear():
         done()
 
 """
-Challenge 12: Center 1  (NOT YET)
+Challenge 12: Center 1 
 """
-while True:
-    if front_is_clear():
-        move()
+while front_is_clear():
+    move()
     if object_here():
         turn_left()
         turn_left()
@@ -257,27 +256,19 @@ while True:
         put()
         move()
         if object_here():
-            object_here()
             turn_left()
             turn_left()
             take()
             move()
             done()
-        if wall_in_front():
-            turn_left()
-            turn_left()
-            move()
 
-        elif wall_in_front():
-            object_here()
-            take()
-            move()
-
-    elif wall_in_front():
+    if wall_in_front():
         turn_left()
         turn_left()
         put()
         move()
+
+
 
 
 
