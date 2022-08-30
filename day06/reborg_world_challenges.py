@@ -248,6 +248,8 @@ Challenge 12: Center 1
 """
 while front_is_clear():
     move()
+
+    # Find the object at the both sides
     if object_here():
         turn_left()
         turn_left()
@@ -255,6 +257,8 @@ while front_is_clear():
         move()
         put()
         move()
+
+        # Find the object at the middle side
         if object_here():
             turn_left()
             turn_left()
@@ -262,6 +266,7 @@ while front_is_clear():
             move()
             done()
 
+    # If the robot faces the wall, move back and put the object
     if wall_in_front():
         turn_left()
         turn_left()
