@@ -277,7 +277,9 @@ while front_is_clear():
 Challenge 14: Harvest 1
 """
 
-
+"""
+APPROACH 1:
+"""
 def turn_right():
     turn_left()
     turn_left()
@@ -337,6 +339,50 @@ move()
 turn_left()
 done()
 
+"""
+APPROACH 2: BRUTE FORCE
+"""
+
+
+def havest_one_row(row_length):
+    for i in range(row_length):
+        if object_here():
+            take()
+            move()
+        else:
+            move()
+    turn_left()
+
+
+row_length = 9
+
+while row_length > 0:
+    havest_one_row(row_length)
+    havest_one_row(row_length)
+    row_length = row_length - 1
+
+take()
+
+"""
+Challenge 15: Harvest 2
+"""
+def havest_one_row(row_length):
+    for i in range(row_length):
+        if object_here():
+            take()
+            move()
+        else:
+            move()
+    turn_left()
+
+
+
+row_length = 9
+
+while row_length > 0:
+    havest_one_row(row_length)
+    havest_one_row(row_length)
+    row_length  = row_length - 1
 
 
 
