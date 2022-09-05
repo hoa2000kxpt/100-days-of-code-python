@@ -366,6 +366,34 @@ take()
 """
 Challenge 15: Harvest 2
 """
+
+"""
+INIT APPROACH:
+"""
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def harvest_one_row():
+    while front_is_clear():
+        if object_here():
+            take()
+        else:
+            move()
+# Initialize steps
+move()
+move()
+turn_left()
+move()
+move()
+
+# Move up
+harvest_one_row()
+
+"""
+SECOND APPROACH:
+"""
 def havest_one_row(row_length):
     for i in range(row_length):
         if object_here():
@@ -383,6 +411,8 @@ while row_length > 0:
     havest_one_row(row_length)
     havest_one_row(row_length)
     row_length  = row_length - 1
+
+
 
 
 
